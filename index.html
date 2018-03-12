@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dot Program</title>
+
+	<style type="text/css">
+		html, body {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+
+			overflow: auto;
+		}
+
+		canvas {
+			margin: 0;
+		}
+
+		.input-container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex-wrap: wrap;
+			height: 10%;
+		}
+
+		.input-container span {
+			margin-left: 2em;
+			height: auto;
+		}
+
+		button {
+			padding: 0.5em 2em;
+			background-color: light-grey;
+			border: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="input-container">
+		<span>
+			<label for="numRed">Num Red:</label>
+			<input value="50" id="numRed" type="number" name="numRed" onchange="UpdateNumRed(this.value)">
+		</span>
+
+		<span>
+			<label for="numBlue">Num Blue:</label>
+			<input value="50" id="numBlue" type="number" name="numBlue" onchange="UpdateNumBlue(this.value)">
+		</span>
+
+		<span>
+			<label for="dotSize">Dot Size:</label>
+			<input value="20" id="dotSize" type="number" name="dotSize" onchange="UpdateDotSize(this.value)">
+		</span>
+
+		<span>
+			<button onclick="RedrawDots(this)">Redraw</button>
+		</span>
+	</div>
+
+	<canvas id="canvas"></canvas>
+
+	<script type="text/javascript" src="./javascript.js"></script>
+</body>
+</html>
